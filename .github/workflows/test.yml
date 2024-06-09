@@ -1,10 +1,6 @@
 name: Test
 
-on:
-  push:
-    branches:  [ "main" ]
-  pull_request:
-    branches:  [ "main" ]
+on: [ push, pull_request ]
 
 permissions:
   contents: write
@@ -24,10 +20,8 @@ jobs:
           distribution: 'temurin'
       - name: Build
         run: mvn clean install
-
-      - name: Tests func
-        run: mvn test
-
+      - name: Test
+        run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
       - name: Test Report
         uses: dorny/test-reporter@v1
         if: always()
