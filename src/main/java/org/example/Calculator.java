@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
+
 public class Calculator {
     static Scanner scanner = new Scanner(System.in);
 
