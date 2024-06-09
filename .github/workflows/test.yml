@@ -18,10 +18,8 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
-      - name: Build
-        run: mvn clean install
       - name: Test
-        run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
+        run: mvn test
       - name: Test Report
         uses: dorny/test-reporter@v1
         if: always()
