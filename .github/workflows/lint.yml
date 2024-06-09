@@ -1,0 +1,24 @@
+name: Lint
+
+on:
+  push:
+    branches:  [ "main" ]
+
+permissions:
+  contents: write
+
+jobs:
+  run-lint:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+        - name: Setup Java JDK
+          uses: actions/setup-java@v4
+          with:
+            java-version: '21'
+            distribution: 'temurin'
+        - name: SetUp linter
+          uses: axel-op/googlejavaformat-action@v3
+          with:
+            args: "--skip-sorting-imports --replace"
