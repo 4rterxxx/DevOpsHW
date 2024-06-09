@@ -3,7 +3,7 @@ package org.example;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class CalculatorTest {
+class CalculatorTest {
   @Test
   void calcTest1() {
     int res = Calculator.calc(1, 1, '+');
