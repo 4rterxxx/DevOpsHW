@@ -23,8 +23,7 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
       - name: Build
-        run: |
-          mvn clean install
+        run: mvn clean install
 
       - name: Tests func
         run: mvn test
