@@ -25,7 +25,7 @@ jobs:
       - name: Test class
         run: cat src/test/java/org/example/CalculatorTest.java
       - name: Test
-        run: mvn test
+        run: mvn surefire:test
 
       - name: Publish Test Report
         uses: dorny/test-reporter@v1
@@ -34,4 +34,4 @@ jobs:
           name: JUnit tests
           path: target/surefire-reports/*.xml
           reporter: java-junit
-          fail-on-error: truegit 
+          fail-on-error: truegit
