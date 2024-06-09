@@ -16,7 +16,7 @@ jobs:
         - name: Setup Java JDK
           uses: actions/setup-java@v4
           with:
-            java-version: '21'
+            java-version: '17'
             distribution: 'temurin'
         - name: SetUp linter
           uses: axel-op/googlejavaformat-action@v3
