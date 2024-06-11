@@ -23,7 +23,7 @@ jobs:
       - name: Test
         run: mvn test
 
-      - name: Publish Test Report
+      - name: Test Report
         uses: dorny/test-reporter@v1
         if: always()
         with:
