@@ -6,9 +6,10 @@ public class Calculator {
   static Scanner scanner = new Scanner(System.in);
 
   public static void main(String[] args) {
-    int num1 = getInt();
-    int num2 = getInt();
-    char operation = getOperation();
+    int num1 = 100;
+    char operation = '/';
+    int num2 = 20;
+    System.out.println(num1 + " " + operation + " " + num2);
     int result = calc(num1, num2, operation);
     System.out.println("Результат операции: " + result);
   }
