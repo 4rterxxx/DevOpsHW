@@ -6,7 +6,7 @@ public class Calculator {
   static Scanner scanner = new Scanner(System.in);
 
   public static void main(String[] args) {
-    int num1 = 400;
+    int num1 = 200;
     char operation = '/';
     int num2 = 5;
     System.out.println(num1 + " " + operation + " " + num2);
